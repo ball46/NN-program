@@ -34,8 +34,8 @@ def approximate(x, w10, w11, w12, w13, w14, desire_output, learning_rate):
 
     y14 = forward_propagation(z, w14, 14)
 
-    e13 = y13 - desire_output
-    e14 = y14 - desire_output
+    e13 = desire_output - y13
+    e14 = desire_output - y14
     print("\nError of node 13 is: %8.3f, Error of node 14 is: %8.3f" % (e13, e14))
     e = (e13 + e14) / 2
 

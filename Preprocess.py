@@ -34,3 +34,15 @@ def export_data_to_csv():
     train.to_csv('train.csv', index=False)
     test.to_csv('test.csv', index=False)
 
+
+def data_before_preprocessing():
+    # fetch dataset
+    breast_cancer_wisconsin_original = fetch_ucirepo(id=15)
+
+    # data (as pandas dataframes)
+    X = breast_cancer_wisconsin_original.data.features
+    Y = breast_cancer_wisconsin_original.data.targets
+    # combine features and targets
+    data = pd.concat([X, Y], axis=1)
+
+    data.to_csv('raw_data.csv', index=False)

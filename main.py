@@ -5,5 +5,6 @@ from Preprocess import *
 
 
 if __name__ == '__main__':
+    data_before_preprocessing()
     # export_data_to_csv()
-    calculate(1000)
+    # calculate(10)
