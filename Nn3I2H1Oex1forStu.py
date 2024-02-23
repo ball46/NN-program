@@ -141,8 +141,9 @@ def test_path(w10, w11, w12, w13, w14, cycles, avg_error):
     print("Correct: ", correct)
     print("Wrong: ", total - correct)
     print("Accuracy: ", correct / total * 100, "%")
+    return correct / total * 100
 
 
 def calculate(cycles):
     w10, w11, w12, w13, w14, avg_error = training_path(cycles)
-    test_path(w10, w11, w12, w13, w14, cycles, avg_error)
+    return test_path(w10, w11, w12, w13, w14, cycles, avg_error)
